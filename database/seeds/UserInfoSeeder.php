@@ -16,7 +16,7 @@ class UserInfoSeeder extends Seeder
     {
         $users = User::all();
         foreach ($users as $user) {
-            UserInfo::created([
+            UserInfo::create([
                 'user_id' => $user->id,
                 'city'    => $faker->city(),
                 'address' => $faker->address(),
